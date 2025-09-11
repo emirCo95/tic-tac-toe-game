@@ -46,7 +46,7 @@ body {
   padding: 1rem;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  display: none;
+  /* display: none; */
 }
 
 #backdrop {
@@ -58,8 +58,29 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+#config-overlay {
+  text-align: center;
+}
+
 #config-overlay h2 {
   margin: 0.5rem 0;
+}
+
+.form-control {
+  margin: 0.5rem 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control input {
+  font: inherit;
+  border: 1px solid rgb(204, 204, 204);
+  width: 15rem;
+  padding: 0.35rem;
 }
 
 @media (min-width: 48rem) {
