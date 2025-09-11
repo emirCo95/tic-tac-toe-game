@@ -36,3 +36,16 @@ body {
 .btn-alt:hover {
   background-color: rgb(190, 129, 240);
 }
+
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 5%;
+}
+
+@media (min-width: 48rem) {
+  .modal {
+    left: calc(50% - 20rem);
+    width: 40rem;
+  }
+}
