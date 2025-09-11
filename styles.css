@@ -27,3 +27,12 @@ body {
   border-color: transparent;
   color: rgb(140, 0, 255);
 }
+
+.btn:hover {
+  background-color: rgb(111, 19, 187);
+  border-color: rgb(111, 19, 187);
+}
+
+.btn-alt:hover {
+  background-color: rgb(190, 129, 240);
+}
