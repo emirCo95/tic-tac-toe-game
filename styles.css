@@ -140,12 +140,17 @@ body {
   color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  /* display: none; */
+  display: none;
 }
 
 #game-over h3 {
   font-size: 2.5rem;
   margin: 0.5rem 0;
+}
+
+#active-player-name {
+  font-weight: bold;
+  color: rgb(50, 5, 87);
 }
 
 @media (min-width: 48rem) {
