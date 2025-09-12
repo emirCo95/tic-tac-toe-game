@@ -179,6 +179,12 @@ body {
   background-color: rgb(112, 13, 104);
 }
 
+#game-board li.disabled {
+  background-color: rgb(112, 13, 204);
+  cursor: default;
+  color: white;
+}
+
 @media (min-width: 48rem) {
   .modal {
     left: calc(50% - 20rem);
