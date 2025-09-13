@@ -18,7 +18,9 @@ function closePlayerConfig() {
   backdropEl.style.display = 'none';
 }
 
-function savePlayerConfig() {}
+function savePlayerConfig(event) {
+  event.preventDefault();
+}
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
 editPlayer2BtnEl.addEventListener('click', openPlayerConfig);
