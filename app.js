@@ -1,3 +1,5 @@
+let editedPlayer = 0;
+
 const playerConfigOverlayEl = document.getElementById('config-overlay');
 const backdropEl = document.getElementById('backdrop');
 
@@ -11,7 +13,7 @@ const cancelConfigBtnEl = document.getElementById('cancel-config-button');
 const errorsOutputEl = document.getElementById('config-errors');
 
 function openPlayerConfig(event) {
-  const selectedPlayerId = event.target.dataset.playerid;
+  editedPlayer = +event.target.dataset.playerid;
   playerConfigOverlayEl.style.display = 'block';
   backdropEl.style.display = 'block';
 }
