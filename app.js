@@ -19,6 +19,7 @@ function closePlayerConfig() {
   playerConfigOverlayEl.style.display = 'none';
   backdropEl.style.display = 'none';
   formElement.firstElementChild.classList.remove('error');
+  errorsOutputEl.textContent = '';
 }
 
 function savePlayerConfig(event) {
