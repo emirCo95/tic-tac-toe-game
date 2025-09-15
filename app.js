@@ -1,5 +1,7 @@
 let editedPlayer = 0;
 
+const players = [];
+
 const playerConfigOverlayEl = document.getElementById('config-overlay');
 const backdropEl = document.getElementById('backdrop');
 
@@ -36,6 +38,11 @@ function savePlayerConfig(event) {
     errorsOutputEl.textContent = 'Please enter a valid name!';
     return;
   }
+
+  const updatedPlayerDataEl = document.getElementById(
+    `player-${editedPlayer}-id`
+  );
+  updatedPlayerDataEl.children[1].textContent = enteredPlayerName;
 }
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
