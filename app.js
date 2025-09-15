@@ -22,9 +22,7 @@ function savePlayerConfig(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
 
-  const enteredPlayerName = formData.get('name');
-
-  console.log(enteredPlayerName);
+  const enteredPlayerName = formData.get('name').trim();
 }
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
