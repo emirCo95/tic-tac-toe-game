@@ -52,6 +52,8 @@ function savePlayerConfig(event) {
     `player-${editedPlayer}-id`
   );
   updatedPlayerDataEl.children[1].textContent = enteredPlayerName;
+
+  players[editedPlayer - 1].name = enteredPlayerName;
 }
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
