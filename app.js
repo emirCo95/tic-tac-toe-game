@@ -10,7 +10,8 @@ const cancelConfigBtnEl = document.getElementById('cancel-config-button');
 
 const errorsOutputEl = document.getElementById('config-errors');
 
-function openPlayerConfig() {
+function openPlayerConfig(event) {
+  const selectedPlayerId = event.target.dataset.playerid;
   playerConfigOverlayEl.style.display = 'block';
   backdropEl.style.display = 'block';
 }
