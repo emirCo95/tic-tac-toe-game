@@ -8,6 +8,8 @@ const editPlayer2BtnEl = document.getElementById('edit-player-2-btn');
 
 const cancelConfigBtnEl = document.getElementById('cancel-config-button');
 
+const errorsOutputEl = document.getElementById('config-errors');
+
 function openPlayerConfig() {
   playerConfigOverlayEl.style.display = 'block';
   backdropEl.style.display = 'block';
@@ -23,6 +25,11 @@ function savePlayerConfig(event) {
   const formData = new FormData(event.target);
 
   const enteredPlayerName = formData.get('name').trim();
+
+  if (!enteredPlayerName) {
+    errorsOutputEl.textContent = 'Please enter a valid name!';
+    return;
+  }
 }
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
