@@ -1,4 +1,5 @@
 let editedPlayer = 0;
+let activePlayer = 0;
 
 const players = [
   {
@@ -72,7 +73,9 @@ function startNewGame() {
   gameAreaEl.style.display = 'block';
 }
 
-function selectGameField() {}
+function selectGameField(event) {
+  event.target.textContent = players[activePlayer].symbol;
+}
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
 editPlayer2BtnEl.addEventListener('click', openPlayerConfig);
