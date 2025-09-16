@@ -99,7 +99,7 @@ function selectGameField(event) {
   const selectedColumn = selectedField.dataset.col - 1;
   const selectedRow = selectedField.dataset.row - 1;
 
-  gameData[selectedRow][selectedColumn];
+  gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
   switchPlayer();
 }
