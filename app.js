@@ -23,6 +23,8 @@ const cancelConfigBtnEl = document.getElementById('cancel-config-button');
 
 const errorsOutputEl = document.getElementById('config-errors');
 
+const startNewGameBtnEl = document.getElementById('start-game-btn');
+
 function openPlayerConfig(event) {
   editedPlayer = +event.target.dataset.playerid;
   playerConfigOverlayEl.style.display = 'block';
