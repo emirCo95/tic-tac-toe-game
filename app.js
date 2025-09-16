@@ -61,6 +61,8 @@ function savePlayerConfig(event) {
   closePlayerConfig();
 }
 
+function startNewGame() {}
+
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
 editPlayer2BtnEl.addEventListener('click', openPlayerConfig);
 
@@ -68,3 +70,5 @@ cancelConfigBtnEl.addEventListener('click', closePlayerConfig);
 backdropEl.addEventListener('click', closePlayerConfig);
 
 formElement.addEventListener('submit', savePlayerConfig);
+
+startNewGameBtnEl.addEventListener('click', startNewGame);
