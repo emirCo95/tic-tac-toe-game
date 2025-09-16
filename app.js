@@ -28,6 +28,7 @@ const startNewGameBtnEl = document.getElementById('start-game-btn');
 const gameAreaEl = document.getElementById('active-game');
 
 const gameFieldElements = document.querySelectorAll('#game-board li');
+const activePlayerNameEl = document.getElementById('active-player-name');
 
 function openPlayerConfig(event) {
   editedPlayer = +event.target.dataset.playerid;
@@ -79,6 +80,7 @@ function switchPlayer() {
   } else {
     activePlayer = 0;
   }
+  activePlayerNameEl.textContent = players[activePlayer].name;
 }
 
 function selectGameField(event) {
