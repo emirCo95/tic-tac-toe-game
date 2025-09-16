@@ -26,6 +26,8 @@ const errorsOutputEl = document.getElementById('config-errors');
 const startNewGameBtnEl = document.getElementById('start-game-btn');
 const gameAreaEl = document.getElementById('active-game');
 
+const gameFieldElements = document.querySelectorAll('#game-board li');
+
 function openPlayerConfig(event) {
   editedPlayer = +event.target.dataset.playerid;
   playerConfigOverlayEl.style.display = 'block';
