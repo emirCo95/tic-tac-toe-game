@@ -81,6 +81,7 @@ function switchPlayer() {
     activePlayer = 0;
   }
   activePlayerNameEl.textContent = players[activePlayer].name;
+  gameAreaEl.style.display = 'block';
 }
 
 function selectGameField(event) {
