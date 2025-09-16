@@ -75,6 +75,7 @@ function startNewGame() {
 
 function selectGameField(event) {
   event.target.textContent = players[activePlayer].symbol;
+  event.target.classList.add('disabled');
 }
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
