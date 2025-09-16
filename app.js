@@ -24,6 +24,7 @@ const cancelConfigBtnEl = document.getElementById('cancel-config-button');
 const errorsOutputEl = document.getElementById('config-errors');
 
 const startNewGameBtnEl = document.getElementById('start-game-btn');
+const gameAreaEl = document.getElementById('active-game');
 
 function openPlayerConfig(event) {
   editedPlayer = +event.target.dataset.playerid;
@@ -61,7 +62,9 @@ function savePlayerConfig(event) {
   closePlayerConfig();
 }
 
-function startNewGame() {}
+function startNewGame() {
+  gameAreaEl.style.display = 'block';
+}
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
 editPlayer2BtnEl.addEventListener('click', openPlayerConfig);
