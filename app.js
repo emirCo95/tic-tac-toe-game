@@ -72,6 +72,8 @@ function startNewGame() {
   gameAreaEl.style.display = 'block';
 }
 
+function selectGameField() {}
+
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
 editPlayer2BtnEl.addEventListener('click', openPlayerConfig);
 
@@ -83,5 +85,5 @@ formElement.addEventListener('submit', savePlayerConfig);
 startNewGameBtnEl.addEventListener('click', startNewGame);
 
 for (const gameFieldElement of gameFieldElements) {
-  gameFieldElement.addEventListener('click');
+  gameFieldElement.addEventListener('click', selectGameField);
 }
