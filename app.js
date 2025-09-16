@@ -81,3 +81,7 @@ backdropEl.addEventListener('click', closePlayerConfig);
 formElement.addEventListener('submit', savePlayerConfig);
 
 startNewGameBtnEl.addEventListener('click', startNewGame);
+
+for (const gameFieldElement of gameFieldElements) {
+  gameFieldElement.addEventListener('click');
+}
