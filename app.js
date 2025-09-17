@@ -75,6 +75,13 @@ function savePlayerConfig(event) {
   closePlayerConfig();
 }
 
+function resetGameStatus() {
+  activePlayer = 0;
+  currentRound = 1;
+  gameOverEl.firstElementChild.innerHTML =
+    'You Won, <span id="winner-name">PLAYER NAME</span>';
+}
+
 function startNewGame() {
   if (players[0].name === '' || players[1].name === '') {
     alert('Set names for both players!!');
@@ -109,6 +116,10 @@ function selectGameField(event) {
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
   const winnerId = checkForGameOver();
+
+  if (winnerId !== 0) {
+    endGame(winnerId);
+  }
 
   currentRound++;
 
