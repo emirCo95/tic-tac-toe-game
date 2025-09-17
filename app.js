@@ -7,6 +7,7 @@ const gameData = [
 let editedPlayer = 0;
 let activePlayer = 0;
 let currentRound = 1;
+let gameIsOver = false;
 
 const players = [
   {
@@ -78,6 +79,7 @@ function savePlayerConfig(event) {
 function resetGameStatus() {
   activePlayer = 0;
   currentRound = 1;
+  gameIsOver = false;
   gameOverEl.firstElementChild.innerHTML =
     'You Won, <span id="winner-name">PLAYER NAME</span>';
   gameOverEl.style.display = 'none';
@@ -118,6 +120,10 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
+  if (event.target.tagName !== 'LI' || gameIsOver) {
+    return;
+  }
+
   const selectedField = event.target;
   const selectedColumn = selectedField.dataset.col - 1;
   const selectedRow = selectedField.dataset.row - 1;
@@ -186,6 +192,7 @@ function checkForGameOver() {
 }
 
 function endGame(winnerId) {
+  gameIsOver = true;
   gameOverEl.style.display = 'block';
   if (winnerId > 0) {
     const winnerName = players[winnerId - 1].name;
