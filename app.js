@@ -80,6 +80,19 @@ function resetGameStatus() {
   currentRound = 1;
   gameOverEl.firstElementChild.innerHTML =
     'You Won, <span id="winner-name">PLAYER NAME</span>';
+  gameOverEl.style.display = 'none';
+
+  let gameBoardIndex = 0;
+
+  for (let i = 0; i < 3; i++) {
+    for (let k = 0; k < 3; k++) {
+      gameData[i][k] = 0;
+      const gameBoardItemElement = gameBoardEl.children[gameBoardIndex];
+      gameBoardEl.children[gameBoardIndex].textContent = '';
+      gameBoardItemElement.classList.remove('disabled');
+      gameBoardIndex++;
+    }
+  }
 }
 
 function startNewGame() {
