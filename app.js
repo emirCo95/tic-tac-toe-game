@@ -6,6 +6,7 @@ const gameData = [
 
 let editedPlayer = 0;
 let activePlayer = 0;
+let currentRound = 1;
 
 const players = [
   {
@@ -105,6 +106,10 @@ function selectGameField(event) {
 
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
+  const winnerId = checkForGameOver();
+
+  currentRound++;
+
   switchPlayer();
 }
 
@@ -141,6 +146,10 @@ function checkForGameOver() {
     gameData[1][1] === gameData[0][2]
   ) {
     return gameData[2][0];
+  }
+
+  if (currentRound === 9) {
+    return -1;
   }
 
   return 0;
