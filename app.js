@@ -159,6 +159,12 @@ function checkForGameOver() {
 
 function endGame(winnerId) {
   gameOverEl.style.display = 'block';
+  if (winnerId > 0) {
+    const winnerName = players[winnerId - 1].name;
+    gameOverEl.firstElementChild.firstElementChild.textContent = winnerName;
+  } else {
+    gameOverEl.firstElementChild.textContent = "It's a draw!";
+  }
 }
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
