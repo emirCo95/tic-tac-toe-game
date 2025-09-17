@@ -37,6 +37,8 @@ const gameAreaEl = document.getElementById('active-game');
 const gameFieldElements = document.querySelectorAll('#game-board li');
 const activePlayerNameEl = document.getElementById('active-player-name');
 
+const gameOverEl = document.getElementById('game-over');
+
 function openPlayerConfig(event) {
   editedPlayer = +event.target.dataset.playerid;
   playerConfigOverlayEl.style.display = 'block';
@@ -153,6 +155,10 @@ function checkForGameOver() {
   }
 
   return 0;
+}
+
+function endGame(winnerId) {
+  gameOverEl.style.display = 'block';
 }
 
 editPlayer1BtnEl.addEventListener('click', openPlayerConfig);
