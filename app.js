@@ -100,6 +100,10 @@ function startNewGame() {
     alert('Set names for both players!!');
     return;
   }
+
+  resetGameStatus();
+
+  activePlayerNameEl.textContent = players[activePlayer].name;
   gameAreaEl.style.display = 'block';
 }
 
